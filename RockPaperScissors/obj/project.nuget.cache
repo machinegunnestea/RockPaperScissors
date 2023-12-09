@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "4Bjsdjf4Jw6KUXITvcMwNcc/pO5F3IXNAZMHBnxxZZYG3ZVSqM3HXzX8v386NZ/r6hGfNkTOzjNokyyi4GY1kQ==",
+  "success": true,
+  "projectFilePath": "D:\\Itrans\\task3\\RockPaperScissors\\RockPaperScissors\\RockPaperScissors.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\igrea\\.nuget\\packages\\consoletables\\2.6.1\\consoletables.2.6.1.nupkg.sha512"
+  ],
+  "logs": []
+}
