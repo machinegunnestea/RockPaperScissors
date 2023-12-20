@@ -30,11 +30,11 @@ namespace RockPaperScissors
         public int GetUserMove()
         {
             int userMove;
+            string input;
             do
             {
                 Console.Write("Enter your move: ");
-                string input = Console.ReadLine();
-
+                input = Console.ReadLine();
                 if (input == "?")
                 {
                     DisplayHelpTable helpTable = new DisplayHelpTable(moves);
@@ -42,12 +42,11 @@ namespace RockPaperScissors
                     DisplayMenu();
                     continue;
                 }
-                else if (Convert.ToInt32(input) == 0)
+                if (input == "0")
                 {
-                    DisplayMenu();
+                    Environment.Exit(0);
                 }
-
-            } while (!int.TryParse(Console.ReadLine(), out userMove) || userMove < 0 || userMove > moves.Length);
+            } while (!int.TryParse(input, out userMove) || userMove < 1 || userMove > moves.Length);
 
             return userMove;
         }
