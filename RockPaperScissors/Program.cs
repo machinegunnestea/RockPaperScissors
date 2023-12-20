@@ -10,15 +10,6 @@ namespace RockPaperScissors
     {
         static void Main(string[] args)
         {
-            //string[] moves;
-            //do
-            //{
-            //    WriteLine("Enter the moves:");
-            //    moves = ReadLine().Split(' ');
-            //    if (!IsValidMovesInput(moves))
-            //        WriteLine("Invalid number of moves. You must provide an odd number of unique moves.");
-            //} while (!IsValidMovesInput(moves));
-
             if (!IsValidMovesInput(args))
             {
                 Console.WriteLine("Invalid arguments. You must provide an odd number of unique moves.");
@@ -26,7 +17,6 @@ namespace RockPaperScissors
             }
 
             Game game = new Game(args);
-            DisplayHelpTable helpTable = new DisplayHelpTable(args);
 
             byte[] key = Crypto.GenerateKey();
             byte[] computerMove = game.GenerateComputerMove(key);

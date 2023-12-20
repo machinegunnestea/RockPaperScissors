@@ -68,30 +68,15 @@ namespace RockPaperScissors
 
         public Result DetermineWinner(int userMove, int computerMove)
         {
-            //int halfLength = (moves.Length - 1) / 2;
-            ////if ((userMove + 1) % moves.Length == computerMove - 1 || (userMove + halfLength) % moves.Length == (computerMove - 1 + halfLength) % moves.Length)
-            //if (userMove == computerMove + 1 || userMove == (computerMove + moves.Length / 2 + 1) % moves.Length)
-            ////if (computerMove == userMove + 1 || computerMove == (userMove + moves.Length / 2 + 1) % moves.Length)
-            //{
-            //    return Result.Win;
-            //}
-            //else if (userMove == computerMove)
-            //{
-            //    return Result.Draw;
-            //}
-            //else
-            //{
-            //    return Result.Lose;
-            //}
             int diff = (userMove - computerMove + moves.Length) % moves.Length;
             int halfRounds = moves.Length / 2;
 
             if (diff == 0)
-                return Result.Draw; // Ничья
+                return Result.Draw;
             else if (diff <= halfRounds)
-                return Result.Win; // Победа игрока
+                return Result.Win;
             else
-                return Result.Lose; // Победа компьютера
+                return Result.Lose;
         }
     }
 
